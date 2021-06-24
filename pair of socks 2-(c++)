@@ -1,0 +1,57 @@
+Given a input socks short form name as r -> red sock, g -> green sock, b -> blue sock. If all the socks are in pair return true or else return false.
+
+Input Format
+------------
+rgrbgb
+
+Constraints
+-----------
+none
+
+Output Format
+-------------
+true
+
+
+
+PROGRAM
+-------#include <cmath>
+#include <cstdio>
+#include <vector>
+#include <iostream>
+#include <algorithm>
+#include<cstring>
+using namespace std;
+
+
+
+int main() {
+    string s;
+    cin>>s;
+    int k=0,j=0,l=0,i,c=0;
+    c=s.length();
+    if(c%2==0)
+    {
+    for(i=0;s[i]<c;i++)
+    {
+        cout<<s[i]<<endl;
+            if(s[i]=='r')
+             {   k++;
+                cout<<k;
+             }
+            else if(s[i]=='g')
+                l++;
+            else if(s[i]=='b')
+                j++;
+    }
+    if((k==j)||(l==j)||(k==l))
+         cout<<"true";
+    else
+         cout<<"false";
+    }
+    else
+         cout<<"false";
+    return 0;
+}
+
+
